@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="455" viewBox="0 0 1000 455" role="img" aria-labelledby="title desc">
+  <title id="title">Selected work</title>
+  <desc id="desc">Three concise project cards for Flight Management System, UYS Labs and Java Notes</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08060d"/><stop offset="0.52" stop-color="#100a18"/><stop offset="1" stop-color="#07050c"/>
+    </linearGradient>
+    <linearGradient id="cyanViolet" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff"/><stop offset="1" stop-color="#9f7aea"/>
+    </linearGradient>
+    <linearGradient id="cyanGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff"/><stop offset="1" stop-color="#f0a6ff"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff" stop-opacity=".8"/><stop offset="1" stop-color="#d7c3ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="45%" cy="38%" r="62%">
+      <stop offset="0" stop-color="#35224f"/><stop offset=".48" stop-color="#1b1129"/><stop offset="1" stop-color="#08060d"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#4a3563" stroke-width="1" opacity=".24"/>
+    </pattern>
+    <pattern id="microgrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#d2bdff" stroke-width=".35" opacity=".14"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="11" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".6"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#d2bdff"/>
+    </marker>
+    <clipPath id="frameClip"><rect x="1" y="1" width="998" height="453" rx="24"/></clipPath>
+    <style>
+    text { font-family: 'Segoe UI', Inter, Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'SFMono-Regular', Consolas, monospace; }
+    .kicker { fill: #d2bdff; font-size: 13px; font-weight: 700; letter-spacing: 3px; }
+    .display { fill: #f8f4ff; font-weight: 800; letter-spacing: -1px; }
+    .copy { fill: #b8a9cc; font-size: 16px; }
+    .muted { fill: #7c6d92; }
+    .fine { fill: #9281aa; font-size: 11px; letter-spacing: 1.6px; }
+    .label { fill: #c8b9db; font-size: 12px; font-weight: 700; letter-spacing: 1.3px; }
+    .value { fill: #faf6ff; font-size: 22px; font-weight: 800; }
+    .hairline { stroke: #342744; stroke-width: 1; }
+    .cyan-line { stroke: #d2bdff; stroke-width: 1.5; fill: none; }
+    .green-line { stroke: #efa9ff; stroke-width: 1.5; fill: none; }
+    .violet-line { stroke: #9f7aea; stroke-width: 1.5; fill: none; }
+    [fill="#2dd4ff"] { fill: #d2bdff; }
+    [stroke="#2dd4ff"] { stroke: #d2bdff; }
+    [fill="#55e6a5"] { fill: #efa9ff; }
+    [stroke="#55e6a5"] { stroke: #efa9ff; }
+    [fill="#9b7cff"] { fill: #9f7aea; }
+    [stroke="#9b7cff"] { stroke: #9f7aea; }
+    [fill="#ffb454"] { fill: #e4c7ff; }
+    [stroke="#ffb454"] { stroke: #e4c7ff; }
+    [fill="#0b1420"], [fill="#08111c"], [fill="#09151e"], [fill="#09131e"],
+    [fill="#08131d"], [fill="#0a1a25"], [fill="#08141b"], [fill="#08131f"],
+    [fill="#0a1420"], [fill="#09161b"] { fill: #130c1d; }
+    [stroke="#1d3048"], [stroke="#1c2b40"], [stroke="#1b3348"],
+    [stroke="#21445e"], [stroke="#24364e"] { stroke: #49355f; }
+    .route { stroke-dasharray: 7 10; animation: route 4s linear infinite; }
+    .route-fast { stroke-dasharray: 5 8; animation: route 2.4s linear infinite; }
+    .pulse { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse2 { animation: pulse 2.6s ease-in-out 1.3s infinite; transform-box: fill-box; transform-origin: center; }
+    .twinkle { animation: twinkle 3.4s ease-in-out infinite; }
+    .spin { animation: spin 22s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .spin-reverse { animation: spin-reverse 30s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .scan { animation: scan 8s linear infinite; }
+    .bar { animation: breathe 3s ease-in-out infinite; transform-origin: left; }
+    @keyframes route { to { stroke-dashoffset: -68; } }
+    @keyframes pulse { 0%,100% { opacity:.45; transform:scale(.86); } 50% { opacity:1; transform:scale(1.12); } }
+    @keyframes twinkle { 0%,100% { opacity:.15; } 50% { opacity:.85; } }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @keyframes spin-reverse { to { transform:rotate(-360deg); } }
+    @keyframes scan { 0% { transform:translateY(-120px); opacity:0; } 15%,85% { opacity:.32; } 100% { transform:translateY(650px); opacity:0; } }
+    @keyframes breathe { 0%,100% { opacity:.62; } 50% { opacity:1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .route,.route-fast,.pulse,.pulse2,.twinkle,.spin,.spin-reverse,.scan,.bar { animation:none !important; }
+    }
+</style>
+  </defs>
+  <g clip-path="url(#frameClip)">
+    <rect width="1000" height="455" fill="url(#bg)"/>
+    <rect width="1000" height="455" fill="url(#grid)"/>
+    <path d="M0 0H430L260 455H0Z" fill="#140c1f" opacity=".62"/>
+    <rect class="scan" x="0" y="0" width="1000" height="2" fill="url(#fade)"/>
+    
+    <text class="mono kicker" x="58" y="53">02 // SELECTED WORK</text>
+    <text class="display" x="55" y="103" font-size="42">A FEW SYSTEMS. ZERO FILLER.</text>
+    <text class="copy" x="58" y="137">Enough context to choose a door. The repositories hold the details.</text>
+
+    <g transform="translate(55 169)">
+      <rect width="555" height="218" rx="20" fill="#130c1d" stroke="#d2bdff" stroke-opacity=".46" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="5" height="218" rx="3" fill="url(#cyanViolet)"/>
+      <text class="mono kicker" x="28" y="35">FLAGSHIP // ACTIVE</text>
+      <text class="display" x="28" y="78" font-size="28">FLIGHT MANAGEMENT SYSTEM</text>
+      <text class="copy" x="28" y="111" font-size="14">Event-driven airline operations platform built as</text>
+      <text class="copy" x="28" y="134" font-size="14">a full-stack microservice system.</text>
+      <g transform="translate(28 158)">
+        <rect width="99" height="34" rx="17" fill="#1b1228" stroke="#d2bdff" stroke-opacity=".34"/>
+        <text class="mono fine" x="49" y="22" text-anchor="middle">JAVA 17</text>
+        <rect x="111" width="116" height="34" rx="17" fill="#1b1228" stroke="#b590ff" stroke-opacity=".34"/>
+        <text class="mono fine" x="169" y="22" text-anchor="middle">SPRING BOOT</text>
+        <rect x="239" width="91" height="34" rx="17" fill="#1b1228" stroke="#efa9ff" stroke-opacity=".34"/>
+        <text class="mono fine" x="284" y="22" text-anchor="middle">KAFKA</text>
+        <path class="violet-line route-fast" d="M355 17H490"/>
+        <text class="mono fine" x="490" y="22" text-anchor="end">OPEN REPO ↗</text>
+      </g>
+      <circle class="pulse" cx="521" cy="34" r="6" fill="#efa9ff"/>
+    </g>
+
+    <g transform="translate(632 169)">
+      <rect width="310" height="101" rx="18" fill="#130c1d" stroke="#9f7aea" stroke-opacity=".42"/>
+      <text class="mono kicker" x="22" y="30">UYS LABS // 15 TRACKS</text>
+      <text class="mono label" x="22" y="56" fill="#f4efff">FOCUSED ENGINEERING LABS</text>
+      <text class="mono fine" x="22" y="79">FROM REST AND JPA TO KAFKA AND CI/CD</text>
+    </g>
+
+    <g transform="translate(632 286)">
+      <rect width="310" height="101" rx="18" fill="#130c1d" stroke="#efa9ff" stroke-opacity=".38"/>
+      <text class="mono kicker" x="22" y="30">JAVA NOTES // FOUNDATION</text>
+      <text class="mono label" x="22" y="56" fill="#f4efff">BACKEND PRACTICE</text>
+      <text class="mono fine" x="22" y="79">CORE JAVA · OOP · COLLECTIONS</text>
+    </g>
+
+    <line x1="58" y1="419" x2="942" y2="419" class="hairline"/>
+    <text class="mono fine" x="58" y="441">BUILD → LEARN → COMPOSE</text>
+    <text class="mono fine" x="942" y="441" text-anchor="end">github.com/aliozank?tab=repositories</text>
+    
+  </g>
+  <rect x="1" y="1" width="998" height="453" rx="24" fill="none" stroke="#342744" stroke-width="2"/>
+  <path d="M24 1H180" stroke="#d2bdff" stroke-width="2"/>
+  <path d="M820 454H976" stroke="#9f7aea" stroke-width="2"/>
+</svg>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering operating principles</title>
+  <desc id="desc">A concise engineering manifesto and request lifecycle</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08060d"/><stop offset="0.52" stop-color="#100a18"/><stop offset="1" stop-color="#07050c"/>
+    </linearGradient>
+    <linearGradient id="cyanViolet" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff"/><stop offset="1" stop-color="#9f7aea"/>
+    </linearGradient>
+    <linearGradient id="cyanGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff"/><stop offset="1" stop-color="#f0a6ff"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff" stop-opacity=".8"/><stop offset="1" stop-color="#d7c3ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="45%" cy="38%" r="62%">
+      <stop offset="0" stop-color="#35224f"/><stop offset=".48" stop-color="#1b1129"/><stop offset="1" stop-color="#08060d"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#4a3563" stroke-width="1" opacity=".24"/>
+    </pattern>
+    <pattern id="microgrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#d2bdff" stroke-width=".35" opacity=".14"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="11" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".6"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#d2bdff"/>
+    </marker>
+    <clipPath id="frameClip"><rect x="1" y="1" width="998" height="358" rx="24"/></clipPath>
+    <style>
+    text { font-family: 'Segoe UI', Inter, Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'SFMono-Regular', Consolas, monospace; }
+    .kicker { fill: #d2bdff; font-size: 13px; font-weight: 700; letter-spacing: 3px; }
+    .display { fill: #f8f4ff; font-weight: 800; letter-spacing: -1px; }
+    .copy { fill: #b8a9cc; font-size: 16px; }
+    .muted { fill: #7c6d92; }
+    .fine { fill: #9281aa; font-size: 11px; letter-spacing: 1.6px; }
+    .label { fill: #c8b9db; font-size: 12px; font-weight: 700; letter-spacing: 1.3px; }
+    .value { fill: #faf6ff; font-size: 22px; font-weight: 800; }
+    .hairline { stroke: #342744; stroke-width: 1; }
+    .cyan-line { stroke: #d2bdff; stroke-width: 1.5; fill: none; }
+    .green-line { stroke: #efa9ff; stroke-width: 1.5; fill: none; }
+    .violet-line { stroke: #9f7aea; stroke-width: 1.5; fill: none; }
+    [fill="#2dd4ff"] { fill: #d2bdff; }
+    [stroke="#2dd4ff"] { stroke: #d2bdff; }
+    [fill="#55e6a5"] { fill: #efa9ff; }
+    [stroke="#55e6a5"] { stroke: #efa9ff; }
+    [fill="#9b7cff"] { fill: #9f7aea; }
+    [stroke="#9b7cff"] { stroke: #9f7aea; }
+    [fill="#ffb454"] { fill: #e4c7ff; }
+    [stroke="#ffb454"] { stroke: #e4c7ff; }
+    [fill="#0b1420"], [fill="#08111c"], [fill="#09151e"], [fill="#09131e"],
+    [fill="#08131d"], [fill="#0a1a25"], [fill="#08141b"], [fill="#08131f"],
+    [fill="#0a1420"], [fill="#09161b"] { fill: #130c1d; }
+    [stroke="#1d3048"], [stroke="#1c2b40"], [stroke="#1b3348"],
+    [stroke="#21445e"], [stroke="#24364e"] { stroke: #49355f; }
+    .route { stroke-dasharray: 7 10; animation: route 4s linear infinite; }
+    .route-fast { stroke-dasharray: 5 8; animation: route 2.4s linear infinite; }
+    .pulse { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse2 { animation: pulse 2.6s ease-in-out 1.3s infinite; transform-box: fill-box; transform-origin: center; }
+    .twinkle { animation: twinkle 3.4s ease-in-out infinite; }
+    .spin { animation: spin 22s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .spin-reverse { animation: spin-reverse 30s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .scan { animation: scan 8s linear infinite; }
+    .bar { animation: breathe 3s ease-in-out infinite; transform-origin: left; }
+    @keyframes route { to { stroke-dashoffset: -68; } }
+    @keyframes pulse { 0%,100% { opacity:.45; transform:scale(.86); } 50% { opacity:1; transform:scale(1.12); } }
+    @keyframes twinkle { 0%,100% { opacity:.15; } 50% { opacity:.85; } }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @keyframes spin-reverse { to { transform:rotate(-360deg); } }
+    @keyframes scan { 0% { transform:translateY(-120px); opacity:0; } 15%,85% { opacity:.32; } 100% { transform:translateY(650px); opacity:0; } }
+    @keyframes breathe { 0%,100% { opacity:.62; } 50% { opacity:1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .route,.route-fast,.pulse,.pulse2,.twinkle,.spin,.spin-reverse,.scan,.bar { animation:none !important; }
+    }
+</style>
+  </defs>
+  <g clip-path="url(#frameClip)">
+    <rect width="1000" height="360" fill="url(#bg)"/>
+    <rect width="1000" height="360" fill="url(#grid)"/>
+    <path d="M0 0H430L260 360H0Z" fill="#140c1f" opacity=".62"/>
+    <rect class="scan" x="0" y="0" width="1000" height="2" fill="url(#fade)"/>
+    
+    <text class="mono kicker" x="58" y="55">01 // OPERATING PRINCIPLES</text>
+    <text class="display" x="55" y="114" font-size="42">I BUILD THE BACKEND</text>
+    <text class="display" x="55" y="160" font-size="42" fill="url(#cyanGreen)">BENEATH THE INTERFACE.</text>
+    <text class="copy" x="58" y="207">From domain rules to event streams, I turn complex operations</text>
+    <text class="copy" x="58" y="233">into systems that can be understood, tested and observed.</text>
+
+    <g transform="translate(575 58)">
+      <rect width="367" height="245" rx="18" fill="#08111c" stroke="#1d3048" filter="url(#shadow)"/>
+      <text class="mono fine" x="24" y="32">REQUEST LIFECYCLE // LIVE TRACE</text>
+      <line x1="52" y1="66" x2="52" y2="205" stroke="#24364e" stroke-width="2"/>
+      <path class="cyan-line route-fast" d="M52 66V205"/>
+      <g>
+        <circle class="pulse" cx="52" cy="70" r="6" fill="#2dd4ff"/>
+        <text class="mono label" x="76" y="75">01 / VALIDATE THE DOMAIN</text>
+        <circle class="pulse2" cx="52" cy="114" r="6" fill="#9b7cff"/>
+        <text class="mono label" x="76" y="119">02 / PERSIST THE TRUTH</text>
+        <circle class="pulse" cx="52" cy="158" r="6" fill="#55e6a5"/>
+        <text class="mono label" x="76" y="163">03 / PUBLISH THE EVENT</text>
+        <circle class="pulse2" cx="52" cy="202" r="6" fill="#ffb454"/>
+        <text class="mono label" x="76" y="207">04 / OBSERVE THE OUTCOME</text>
+      </g>
+    </g>
+
+    <g transform="translate(58 273)">
+      <text class="mono fine" x="0" y="0">DESIGN FOR</text>
+      <text class="mono label" x="0" y="28" fill="#eef6ff">FAILURE</text>
+      <line x1="120" y1="-11" x2="120" y2="38" class="hairline"/>
+      <text class="mono fine" x="153" y="0">OPTIMIZE FOR</text>
+      <text class="mono label" x="153" y="28" fill="#eef6ff">CLARITY</text>
+      <line x1="298" y1="-11" x2="298" y2="38" class="hairline"/>
+      <text class="mono fine" x="331" y="0">SHIP WITH</text>
+      <text class="mono label" x="331" y="28" fill="#eef6ff">EVIDENCE</text>
+    </g>
+    <text class="mono fine" x="942" y="337" text-anchor="end">ALI OZAN KARAÇOR // TÜRKIYE</text>
+    
+  </g>
+  <rect x="1" y="1" width="998" height="358" rx="24" fill="none" stroke="#342744" stroke-width="2"/>
+  <path d="M24 1H180" stroke="#d2bdff" stroke-width="2"/>
+  <path d="M820 359H976" stroke="#9f7aea" stroke-width="2"/>
+</svg>
