@@ -141,7 +141,7 @@
     <line x1="58" y1="390" x2="942" y2="390" class="hairline"/>
     <text class="mono fine" x="58" y="418">CURRENT VECTOR</text>
     <g transform="translate(58 439)">
-      <text class="value" x="0" y="0">03</text><text class="mono fine" x="39" y="-2">PUBLIC REPOS</text>
+      <text class="value" x="0" y="0">04</text><text class="mono fine" x="39" y="-2">PUBLIC REPOS</text>
       <line x1="182" y1="-21" x2="182" y2="17" class="hairline"/>
       <text class="value" x="214" y="0">39</text><text class="mono fine" x="269" y="-2">YEARLY SIGNALS</text>
       <line x1="438" y1="-21" x2="438" y2="17" class="hairline"/>
