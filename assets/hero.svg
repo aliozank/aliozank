@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Ali Ozan Karaçor — engineering profile</title>
+  <desc id="desc">Building reliable, observable and event-driven software.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08060d"/><stop offset="0.52" stop-color="#100a18"/><stop offset="1" stop-color="#07050c"/>
+    </linearGradient>
+    <linearGradient id="cyanViolet" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff"/><stop offset="1" stop-color="#9f7aea"/>
+    </linearGradient>
+    <linearGradient id="cyanGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff"/><stop offset="1" stop-color="#f0a6ff"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d7c3ff" stop-opacity=".8"/><stop offset="1" stop-color="#d7c3ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="45%" cy="38%" r="62%">
+      <stop offset="0" stop-color="#35224f"/><stop offset=".48" stop-color="#1b1129"/><stop offset="1" stop-color="#08060d"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#4a3563" stroke-width="1" opacity=".24"/>
+    </pattern>
+    <pattern id="microgrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#d2bdff" stroke-width=".35" opacity=".14"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="11" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".6"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#d2bdff"/>
+    </marker>
+    <clipPath id="frameClip"><rect x="1" y="1" width="998" height="518" rx="24"/></clipPath>
+    <style>
+    text { font-family: 'Segoe UI', Inter, Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'SFMono-Regular', Consolas, monospace; }
+    .kicker { fill: #d2bdff; font-size: 13px; font-weight: 700; letter-spacing: 3px; }
+    .display { fill: #f8f4ff; font-weight: 800; letter-spacing: -1px; }
+    .copy { fill: #b8a9cc; font-size: 16px; }
+    .muted { fill: #7c6d92; }
+    .fine { fill: #9281aa; font-size: 11px; letter-spacing: 1.6px; }
+    .label { fill: #c8b9db; font-size: 12px; font-weight: 700; letter-spacing: 1.3px; }
+    .value { fill: #faf6ff; font-size: 22px; font-weight: 800; }
+    .hairline { stroke: #342744; stroke-width: 1; }
+    .cyan-line { stroke: #d2bdff; stroke-width: 1.5; fill: none; }
+    .green-line { stroke: #efa9ff; stroke-width: 1.5; fill: none; }
+    .violet-line { stroke: #9f7aea; stroke-width: 1.5; fill: none; }
+    [fill="#2dd4ff"] { fill: #d2bdff; }
+    [stroke="#2dd4ff"] { stroke: #d2bdff; }
+    [fill="#55e6a5"] { fill: #efa9ff; }
+    [stroke="#55e6a5"] { stroke: #efa9ff; }
+    [fill="#9b7cff"] { fill: #9f7aea; }
+    [stroke="#9b7cff"] { stroke: #9f7aea; }
+    [fill="#ffb454"] { fill: #e4c7ff; }
+    [stroke="#ffb454"] { stroke: #e4c7ff; }
+    [fill="#0b1420"], [fill="#08111c"], [fill="#09151e"], [fill="#09131e"],
+    [fill="#08131d"], [fill="#0a1a25"], [fill="#08141b"], [fill="#08131f"],
+    [fill="#0a1420"], [fill="#09161b"] { fill: #130c1d; }
+    [stroke="#1d3048"], [stroke="#1c2b40"], [stroke="#1b3348"],
+    [stroke="#21445e"], [stroke="#24364e"] { stroke: #49355f; }
+    .route { stroke-dasharray: 7 10; animation: route 4s linear infinite; }
+    .route-fast { stroke-dasharray: 5 8; animation: route 2.4s linear infinite; }
+    .pulse { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse2 { animation: pulse 2.6s ease-in-out 1.3s infinite; transform-box: fill-box; transform-origin: center; }
+    .twinkle { animation: twinkle 3.4s ease-in-out infinite; }
+    .spin { animation: spin 22s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .spin-reverse { animation: spin-reverse 30s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .scan { animation: scan 8s linear infinite; }
+    .bar { animation: breathe 3s ease-in-out infinite; transform-origin: left; }
+    @keyframes route { to { stroke-dashoffset: -68; } }
+    @keyframes pulse { 0%,100% { opacity:.45; transform:scale(.86); } 50% { opacity:1; transform:scale(1.12); } }
+    @keyframes twinkle { 0%,100% { opacity:.15; } 50% { opacity:.85; } }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @keyframes spin-reverse { to { transform:rotate(-360deg); } }
+    @keyframes scan { 0% { transform:translateY(-120px); opacity:0; } 15%,85% { opacity:.32; } 100% { transform:translateY(650px); opacity:0; } }
+    @keyframes breathe { 0%,100% { opacity:.62; } 50% { opacity:1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .route,.route-fast,.pulse,.pulse2,.twinkle,.spin,.spin-reverse,.scan,.bar { animation:none !important; }
+    }
+</style>
+  </defs>
+  <g clip-path="url(#frameClip)">
+    <rect width="1000" height="520" fill="url(#bg)"/>
+    <rect width="1000" height="520" fill="url(#grid)"/>
+    <path d="M0 0H430L260 520H0Z" fill="#140c1f" opacity=".62"/>
+    <rect class="scan" x="0" y="0" width="1000" height="2" fill="url(#fade)"/>
+    
+    <circle cx="815" cy="214" r="248" fill="#2b183e" opacity=".22" filter="url(#softGlow)"/>
+    <g opacity=".62"><circle class="twinkle" style="animation-delay:0.0s" cx="704" cy="65" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:0.55s" cx="737" cy="96" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:1.1s" cx="914" cy="69" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:1.6500000000000001s" cx="847" cy="118" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:2.2s" cx="958" cy="179" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:0.0s" cx="679" cy="205" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:0.55s" cx="891" cy="263" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:1.1s" cx="730" cy="318" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:1.6500000000000001s" cx="945" cy="344" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:2.2s" cx="805" cy="375" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:0.0s" cx="664" cy="407" r="1.8" fill="#bfefff"/><circle class="twinkle" style="animation-delay:0.55s" cx="922" cy="440" r="1.8" fill="#bfefff"/></g>
+    <path class="cyan-line route" d="M590 410C690 346 682 143 806 100S960 105 991 46" opacity=".25"/>
+    <path class="violet-line route-fast" d="M648 456C720 378 835 397 916 300S945 137 1008 119" opacity=".22"/>
+
+    <text class="mono kicker" x="58" y="56">AOK // ENGINEERING PROFILE</text>
+    <g transform="translate(58 78)">
+      <circle class="pulse" cx="6" cy="6" r="5" fill="#efa9ff" filter="url(#glow)"/>
+      <text class="mono fine" x="19" y="10" fill="#efa9ff">SYSTEM ONLINE</text>
+      <text class="mono fine" x="168" y="10">TR / UTC+3</text>
+      <text class="mono fine" x="292" y="10">BUILD 2026</text>
+    </g>
+
+    <text class="display" x="54" y="176" font-size="59">ALI OZAN KARAÇOR</text>
+    <rect x="57" y="198" width="492" height="3" rx="2" fill="url(#cyanViolet)" filter="url(#glow)"/>
+    <text class="mono" x="58" y="242" fill="#dbe9fb" font-size="22" font-weight="700" letter-spacing="2.2">JAVA BACKEND // DISTRIBUTED SYSTEMS</text>
+    <text class="copy" x="58" y="281">Building reliable, observable and event-driven software.</text>
+
+    <g>
+      <rect x="58" y="312" width="170" height="34" rx="17" fill="#0b1420" stroke="#d2bdff" stroke-opacity=".42"/>
+      <circle cx="75" cy="329" r="3.5" fill="#d2bdff" filter="url(#glow)"/>
+      <text class="mono label" x="87" y="334">SYSTEM DESIGN</text>
+    </g>
+    <g>
+      <rect x="242" y="312" width="178" height="34" rx="17" fill="#0b1420" stroke="#9f7aea" stroke-opacity=".42"/>
+      <circle cx="259" cy="329" r="3.5" fill="#9f7aea" filter="url(#glow)"/>
+      <text class="mono label" x="271" y="334">EVENT-DRIVEN</text>
+    </g>
+    <g>
+      <rect x="434" y="312" width="174" height="34" rx="17" fill="#0b1420" stroke="#efa9ff" stroke-opacity=".42"/>
+      <circle cx="451" cy="329" r="3.5" fill="#efa9ff" filter="url(#glow)"/>
+      <text class="mono label" x="463" y="334">OBSERVABILITY</text>
+    </g>
+
+    <g transform="translate(814 214)">
+      <circle r="134" fill="url(#orb)" stroke="#21445e" stroke-width="1.5" filter="url(#shadow)"/>
+      <circle r="110" fill="url(#microgrid)" opacity=".7"/>
+      <circle class="spin" r="151" fill="none" stroke="#2dd4ff" stroke-opacity=".38" stroke-width="1.5" stroke-dasharray="2 11"/>
+      <circle class="spin-reverse" r="168" fill="none" stroke="#9b7cff" stroke-opacity=".28" stroke-width="1" stroke-dasharray="23 14 4 14"/>
+      <path d="M-87 48C-36-62 48-90 96-20" fill="none" stroke="#2dd4ff" stroke-opacity=".46" stroke-width="1.5"/>
+      <path d="M-104-23C-24 29 31 65 102 42" fill="none" stroke="#9b7cff" stroke-opacity=".38"/>
+      <circle class="pulse" cx="-87" cy="48" r="6" fill="#2dd4ff"/>
+      <circle class="pulse2" cx="96" cy="-20" r="6" fill="#55e6a5"/>
+      <circle cx="102" cy="42" r="4" fill="#9b7cff"/>
+      <text class="mono" text-anchor="middle" y="14" fill="#f4f8ff" font-size="52" font-weight="800" letter-spacing="3">AOK</text>
+      <text class="mono fine" text-anchor="middle" y="43">BACKEND CONTROL</text>
+    </g>
+
+    <line x1="58" y1="390" x2="942" y2="390" class="hairline"/>
+    <text class="mono fine" x="58" y="418">CURRENT VECTOR</text>
+    <g transform="translate(58 439)">
+      <text class="value" x="0" y="0">03</text><text class="mono fine" x="39" y="-2">PUBLIC REPOS</text>
+      <line x1="182" y1="-21" x2="182" y2="17" class="hairline"/>
+      <text class="value" x="214" y="0">39</text><text class="mono fine" x="269" y="-2">YEARLY SIGNALS</text>
+      <line x1="438" y1="-21" x2="438" y2="17" class="hairline"/>
+      <text class="value" x="470" y="0">15</text><text class="mono fine" x="506" y="-2">ENGINEERING LABS</text>
+      <line x1="668" y1="-21" x2="668" y2="17" class="hairline"/>
+      <text class="value" x="700" y="0">04</text><text class="mono fine" x="740" y="-2">PEOPLE TUNED IN</text>
+    </g>
+    <text class="mono fine" x="58" y="494">github.com/aliozank</text>
+    <text class="mono fine" x="942" y="494" text-anchor="end">SCROLL TO ENTER THE SYSTEM ↓</text>
+    
+  </g>
+  <rect x="1" y="1" width="998" height="518" rx="24" fill="none" stroke="#342744" stroke-width="2"/>
+  <path d="M24 1H180" stroke="#d2bdff" stroke-width="2"/>
+  <path d="M820 519H976" stroke="#9f7aea" stroke-width="2"/>
+</svg>
