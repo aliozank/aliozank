@@ -15,5 +15,4 @@
   <img src="./assets/hero.svg" width="1000" alt="Ali Ozan Karaçor — Java backend and distributed systems profile hero">
 </a>
 
-<img src="./assets/manifesto.svg" width="1000" alt="Engineering manifesto: reliable, observable, event-driven systems">
 
