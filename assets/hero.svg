@@ -143,11 +143,11 @@
     <g transform="translate(58 439)">
       <text class="value" x="0" y="0">04</text><text class="mono fine" x="39" y="-2">PUBLIC REPOS</text>
       <line x1="182" y1="-21" x2="182" y2="17" class="hairline"/>
-      <text class="value" x="214" y="0">48</text><text class="mono fine" x="269" y="-2">YEARLY SIGNALS</text>
+      <text class="value" x="214" y="0">59</text><text class="mono fine" x="269" y="-2">YEARLY SIGNALS</text>
       <line x1="438" y1="-21" x2="438" y2="17" class="hairline"/>
       <text class="value" x="470" y="0">15</text><text class="mono fine" x="506" y="-2">ENGINEERING LABS</text>
       <line x1="668" y1="-21" x2="668" y2="17" class="hairline"/>
-      <text class="value" x="700" y="0">04</text><text class="mono fine" x="740" y="-2">PEOPLE TUNED IN</text>
+      <text class="value" x="700" y="0">03</text><text class="mono fine" x="740" y="-2">PEOPLE TUNED IN</text>
     </g>
     <text class="mono fine" x="58" y="494">github.com/aliozank</text>
     <text class="mono fine" x="942" y="494" text-anchor="end">SCROLL TO ENTER THE SYSTEM ↓</text>
